@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import "./Login.css"
 
 const regexEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i;
 const regexPassword = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/i;
@@ -70,29 +71,40 @@ const handleSubmit = (event) => {
  
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <body>
+     <div className='wrapper'> 
 
-        <label>Email:</label>
+    <div className='form-box login'>
+    <h2>Login</h2>
+      <form  className='form' onSubmit={handleSubmit}>
+        <div className='input-box'>
+       <label>Email:</label>
         <input name="email"
          value={inputs.email} 
          onChange={handleChange}
          placeholder=""
          />
          <p className='danger'>{errors.email}</p>
+         </div>
+
+         <div className='input-box'>
         <label>Password: </label>
         <input name='password' 
         value={inputs.password}
         onChange={handleChange}
         ></input>
          <p className='danger'>{errors.password}</p>
+        </div>
+
          {
-          Object.keys(errors).length===0 ? (  <Link to="/home">
-        <button type="submit">Ingresar</button>
+           Object.keys(errors).length===0 ? (  <Link to="/home">
+        <button className='ingresar' type="submit">Ingresar</button>
          </Link>
           ) : null}
       </form>
       </div>
+          </div>
+          </body>
       );
     }
     

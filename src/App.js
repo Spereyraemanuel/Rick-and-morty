@@ -1,15 +1,15 @@
 import './App.css';
-import Cards from './components/Cards.jsx';
-import NavBar from './components/NavBar';
+import Cards from './components/cards/Cards.jsx';
+import NavBar from './components/navBar/NavBar';
 import { useState } from "react"
 import axios from 'axios';
 import { Route, Routes, useLocation } from 'react-router-dom';
-import Login from "./components/Login"
-import About from "./components/About"
-import Detail from "./components/Detail"
+import Login from "./components/login/Login"
+import About from "./components/about/About"
+import Detail from "./components/detail/Detail"
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import Favorites from './components/Favorites';
+import Favorites from './components/favorites/Favorites';
 
 
 
@@ -60,7 +60,7 @@ function onClose(id){
 }
 
   return (
-
+   
       <div className='App'>
          {location.pathname === "/" ? null : <NavBar logOut={logOut} onSearch={onSearch} />}
          <Routes>

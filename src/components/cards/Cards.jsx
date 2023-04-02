@@ -1,4 +1,4 @@
-import Card from './Card';
+import Card from '../card/Card';
 
 // Dirígete al componente Cards y envíale el id del personaje como propiedad al componente Card.
 

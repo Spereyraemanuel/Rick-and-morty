@@ -104,7 +104,6 @@ const handleSubmit = (event) => {
       </form>
       </div>
           </div>
-          </body>
       );
     }
     

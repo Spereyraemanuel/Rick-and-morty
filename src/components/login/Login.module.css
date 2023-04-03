@@ -1,0 +1,92 @@
+.wrapperBody{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 5rem; 
+ background-image: url(./17236312.png);
+ background-position: center;
+ background-size: cover;
+ background-repeat: no-repeat;
+ width: 88.2%;
+ height: 74.5vh;
+}
+
+ .wrapper {
+   position: relative;
+   width: 400px;
+   height: 440px;
+   background: transparent;
+   border: 2px solid rgba(255, 255, 255, .5);
+   border-radius: 20px;
+   backdrop-filter: blur(20px);
+   box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   }
+ 
+
+.inputBox{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #000000;
+    margin: 30px 0;
+   
+ }
+
+ .formBox h2 {
+    font-size: 2em;
+    color: #000000;
+    text-align: center;
+ }
+
+ 
+ .inputBox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translatey(-50%);
+    font-size: 1em;
+    color: #000000;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+    top: -5px
+ }
+
+
+.inputBox input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #000000;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.formBox{
+    width: 100%;
+    padding: 40px;
+   }
+
+   .wrapper .formBox{
+    transition: transform .18s ease;
+    transform: translateX(0);
+   }
+   
+   .ingresar{
+    width: 100%;
+    height: 45px;
+    background:#000000;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+   }

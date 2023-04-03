@@ -1,5 +1,5 @@
 import React from 'react';
-import Cards from '../cards/Cards';
+import Card from '../card/Card';
 import { connect } from 'react-redux';
 
 
@@ -12,7 +12,7 @@ function Favorites({ myFavorites, onClose }) {
         myFavorites.map((character, index) => {
           return (
           
-            <Cards
+            <Card
               key={index}
               id={character.id}
               name={character.name}
@@ -20,7 +20,7 @@ function Favorites({ myFavorites, onClose }) {
               gender={character.gender}
               image={character.image}
               species={character.species}
-              origin={character.origin.name}
+              origin={character.origin?.name}
               onClose={onClose}
             />
           );
@@ -31,10 +31,10 @@ function Favorites({ myFavorites, onClose }) {
 }
 
 
-function mapState(state) {
+function mapStateToProps(state) {
   return {
     myFavorites: state.myFavorites,
   }
 }
 
-export default connect(mapState)(Favorites)
+export default connect(mapStateToProps, null)(Favorites)

@@ -1,23 +1,22 @@
 import React from 'react'
 import SearchBar from '../SearchBar/SearchBar'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import "../navBar/NavBar.css"
 
 
-export default function navBar({onSearch, logOut}) {
+
+export default function navBar({ onSearch, logOut }) {
   return (
-    <div> 
-      <Link to="/home">
-        <button>Home</button>
-      </Link>
-      <Link to="/about">
-         <button>About</button>
-      </Link>
-      <Link to="/Favorites">
-         <button>Favorites</button>
-      </Link>
-         <SearchBar onSearch={onSearch} />  
-          <button onClick={logOut}>LogOut</button>
-    </div>
+        <nav>
+      <div className='navigation'>
+        <NavLink className="a" to="/home">Home</NavLink>
+        <NavLink className="a" to="/about">About</NavLink>
+        <NavLink className="a" to="/Favorites">Favorites</NavLink>
+          <SearchBar onSearch={onSearch} />
+        <button onClick={logOut}>LogOut</button>
+      </div>
+        </nav>
+   
   )
 };
 

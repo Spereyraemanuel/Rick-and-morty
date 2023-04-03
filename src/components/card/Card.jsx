@@ -25,7 +25,7 @@ useEffect(() => {
         setIsFav(true);
      }
   });
-}, [myFavorites]);
+}, [myFavorites, props.id]);
 
   return(
    <div>
